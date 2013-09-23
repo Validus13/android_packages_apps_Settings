@@ -1697,5 +1697,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Reset tiles -->
     <string name="tiles_reset_title">Reset</string>
     <string name="tiles_reset_message">Restore the default displayed tiles and layout?</string> 
+
+    <!-- Less Notification sounds -->
+    <string name="less_notification_sounds_title">Less Frequent Notification Sounds</string>
+    <string name="less_notification_sounds_summary">Limit the notification sounds of each app to only play once per set time period</string> 
     
 </resources>
