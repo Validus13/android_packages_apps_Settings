@@ -124,6 +124,7 @@
     <string name="lockscreen_battery_status_title">Состояние батареи</string>
     <string name="lockscreen_battery_status_charging">Показывать во время зарядки</string>
     <string name="lockscreen_battery_status_alwayson">Показывать всегда</string>
+    <string name="lockscreen_battery_status_alwaysoff">Не показывать</string>
 
     <!-- Profiles settings -->
     <string name="profiles_settings_title">Профили</string>
@@ -247,6 +248,10 @@
     <string name="performance_settings_warning_title">Соблюдайте осторожность</string>
     <string name="performance_settings_warning">Эти настройки включены для экспериментов и любые внесённые изменения могут вызвать нестабильную работу, ошибки, потерю данных или аппаратные сбои.\n\nМы просим не слать баг-репорты, если вы что-то меняли в этих настройках.</string>
 
+    <!-- Performance Settings : Set on boot option -->
+    <string name="performance_set_on_boot">Выставлять при загрузке</string>
+    <string name="performance_set_on_boot_summary">Применять текущие настройки при перезагрузке</string>
+
     <!-- Performance Settings : Processor Settings -->
     <!-- Performance Settings : Processor settings title -->
     <string name="processor_title">Процессор</string>
@@ -262,6 +267,14 @@
 
     <!-- Performance Settings : I/O scheduler settings sub items -->
     <string name="io_sched_title">Планировщик I/O</string>
+
+    <!-- Performance Settings : Performance profile settings -->
+    <string name="perf_profile_title">Профиль</string>
+
+    <!-- Performance Settings : Performance profile modes -->
+    <string name="perf_profile_pwrsv">Экономия энергии</string>
+    <string name="perf_profile_bal">Сбалансированный</string>
+    <string name="perf_profile_perf">Высокая производительность</string>
 
     <!-- Memory Management -->
     <string name="memory_management_title">Управление памятью</string>
@@ -421,6 +434,7 @@
     <string name="hardware_keys_menu_key_title">Кнопка «Меню»</string>
     <string name="hardware_keys_assist_key_title">Кнопка «Поиск»</string>
     <string name="hardware_keys_appswitch_key_title">Кнопка «Недавние приложения»</string>
+    <string name="hardware_keys_camera_key_title">Кнопка камеры</string>
     <string name="hardware_keys_volume_keys_title">Кнопки громкости</string>
     <string name="hardware_keys_short_press_title">Короткое нажатие</string>
     <string name="hardware_keys_long_press_title">Долгое нажатие</string>
@@ -435,7 +449,8 @@
     <string name="hardware_keys_action_search">Поисковый помощник</string>
     <string name="hardware_keys_action_voice_search">Голосовой поиск</string>
     <string name="hardware_keys_action_in_app_search">Поиск в приложении</string>
-    <string name="home_wake_title">Кнопка «Домой»</string>
+    <string name="hardware_keys_action_launch_camera">Запуск камеры</string>
+    <string name="home_wake_title">Пробуждение кнопкой «Домой»</string>
     <string name="home_wake_summary">Нажатие кнопки «Домой» пробуждает устройство</string>
     <string name="volume_wake_title">Пробуждение кнопками громкости</string>
     <string name="volume_wake_summary">Нажатие на кнопки громкости пробуждает устройство</string>
@@ -556,7 +571,8 @@
     <string name="lockscreen_buttons_next">Следующий трек</string>
     <string name="lockscreen_buttons_previous">Предыдущий трек</string>
     <string name="lockscreen_buttons_playpause">Воспр./Пауза</string>
-    <string name="lockscreen_buttons_toggle_sound">Режимы звука</string>
+    <string name="lockscreen_buttons_toggle_sound">Перекл. режим звонка</string>
+    <string name="lockscreen_buttons_sleep">Спящий режим</string>
 
     <!-- Quick settings panel  -->
     <string name="quick_settings_panel_title">Панель быстрых настроек</string>
@@ -870,7 +886,7 @@
     <string name="blacklist_summary_type_messages_only">сообщения</string>
     <string name="blacklist_summary_type_calls_and_messages">вызовы и сообщения</string>
     <string name="blacklist_regex_title">Регулярные выражения</string>
-    <string name="blacklist_regex_summary">Используйте «.» как маску и «*» для повторения. Например, выражение «123.*» будет блокировать номера, начинающиеся с «123», а «.*123.*» — номера, содержащие «123» в любой части</string>
+    <string name="blacklist_regex_summary">Используйте «.» как маску и «*» для повторения. Например, выражение «123.*» будет блокировать номера, начинающиеся с «123», а «.*123.*» — номера, содержащие «123» в любой части</string>
     <string name="blacklist_policy_block_calls">Блокировать входящие вызовы</string>
     <string name="blacklist_policy_block_messages">Блокировать входящие сообщения</string>
 
@@ -911,6 +927,10 @@
     <!-- Hardware tunables - Gamma calibration -->
     <string name="gamma_tuning_title_head">Гамма</string>
     <string name="gamma_tuning_summary_head">Настройка гамма-коррекции экрана</string>
+    <string name="gamma_tuning_control_set_header">Группа <xliff:g id="index">%d</xliff:g></string>
+    <string name="gamma_tuning_contrast">Контрастность</string>
+    <string name="gamma_tuning_brightness">Яркость</string>
+    <string name="gamma_tuning_saturation">Насыщенность</string>
 
     <!--  Other device settings -->
     <string name="more_device_controls_title">Ещё\u2026</string>
@@ -929,4 +949,22 @@
     <!-- SELinux warning -->
     <string name="selinux_enable_title">Режим усиленной безопасности</string>
     <string name="selinux_enable_warning">Вы собираетесь включить SELinux — усовершенствованный механизм безопасности.\n\nЭта возможность предназначена для отладки и может привести к нестабильной работе, если не поддерживается вашим устройством.\n\nВы уверены, что хотите продолжить?</string>
+
+    <!-- Message when bluetooth dialog for pin entry is showing when HIGH security enabled -->
+    <string name="bluetooth_enter_pin_msg_hs">Для подключения к устройству <xliff:g id="bold">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b&gt;&lt;br&gt;&lt;br&gt;</xliff:g> введите PIN-код (16 или более цифр):</string>
+
+    <!-- Bluetooth settings. The user-visible string that is used whenever referring to the SAP profile. -->
+    <string name="bluetooth_profile_sap">Доступ к SIM</string>
+
+    <!-- Bluetooth settings. Connection options screen. The summary for the SAP checkbox preference when SAP is connected. -->
+    <string name="bluetooth_sap_profile_summary_connected">Подключено к серверу доступа SIM</string>
+
+    <!-- Bluetooth settings. Connection options screen. The summary for the SAP checkbox preference that describes how checking it will set the SAP profile as preferred. -->
+    <string name="bluetooth_sap_profile_summary_use_for">Используется для доступа к SIM</string>
+
+    <!-- Status for networks disabled form assoc rejects from Access Point -->
+    <string name="wifi_disabled_association_rejected">Соединение отклонено</string>
+
+    <!-- GPS download data over wi-fi only -->
+    <string name="gps_download_data_wifi_only">Загружать вспомогательные данные GPS только через Wi-Fi</string>
 </resources>
