@@ -1503,7 +1503,16 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="enable_network_speed_summary">Show network speed in statusbar</string> 
     <string name="hide_network_speed">Hide when there is no traffic</string>
     <string name="hide_network_speed_summary">Hide network speed indicator when there is no traffic</string> 
-
+    <string name="network_speed_summary">Show summary of traffic</string>
+    <string name="traffic_timeout_0s">Don\'t show</string>
+    <string name="traffic_timeout_1s">1 second</string>
+    <string name="traffic_timeout_2s">2 seconds</string>
+    <string name="traffic_timeout_3s">3 seconds</string>
+    <string name="traffic_timeout_5s">5 seconds</string>
+    <string name="traffic_timeout_8s">8 seconds</string>
+    <string name="traffic_timeout_10s">10 seconds</string>
+    <string name="traffic_timeout_15s">15 seconds</string>
+    <string name="traffic_timeout_25s">25 seconds</string> 
 
     <!-- Network speed color style -->
     <string name="network_speed_color_title">Network speed color</string>
