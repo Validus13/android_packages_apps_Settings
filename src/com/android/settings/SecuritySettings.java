@@ -91,6 +91,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String KEY_CREDENTIALS_MANAGER = "credentials_management";
     private static final String KEY_NOTIFICATION_ACCESS = "manage_notification_access";
     private static final String PACKAGE_MIME_TYPE = "application/vnd.android.package-archive";
+    private static final String LOCK_NUMPAD_RANDOM = "lock_numpad_random"; 
 
     // CyanogenMod Additions
     private static final String SLIDE_LOCK_TIMEOUT_DELAY = "slide_lock_timeout_delay";
@@ -127,6 +128,8 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private CheckBoxPreference mPowerButtonInstantlyLocks;
 
     private Preference mNotificationAccess;
+    
+    private ListPreference mLockNumpadRandom; 
 
     private boolean mIsPrimary;
 
@@ -274,6 +277,14 @@ public class SecuritySettings extends SettingsPreferenceFragment
             // Add the additional CyanogenMod settings
             addPreferencesFromResource(R.xml.security_settings_cyanogenmod);
 
+	    // Lock Numpad Random
+            mLockNumpadRandom = (ListPreference) root.findPreference(LOCK_NUMPAD_RANDOM);
+            mLockNumpadRandom.setValue(String.valueOf(Settings.Secure.getInt(resolver,
+                    Settings.Secure.LOCK_NUMPAD_RANDOM, 0)));
+            mLockNumpadRandom.setSummary(mLockNumpadRandom.getEntry());
+            mLockNumpadRandom.setOnPreferenceChangeListener(this); 
+
+
             CheckBoxPreference quickUnlockScreen = (CheckBoxPreference)
                     findPreference(Settings.System.LOCKSCREEN_QUICK_UNLOCK_CONTROL);
             CheckBoxPreference menuUnlock = (CheckBoxPreference)
@@ -292,6 +303,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
                 menuUnlock.setEnabled(false);
                 homeUnlock.setEnabled(false);
                 vibratePref.setEnabled(false);
+		mLockNumpadRandom.setEnabled(false);
             // disable menu unlock and vibrate on unlock options if
             // using PIN/password as primary lock screen or as
             // backup to biometric
@@ -300,10 +312,12 @@ public class SecuritySettings extends SettingsPreferenceFragment
                 menuUnlock.setEnabled(false);
                 homeUnlock.setEnabled(false);
                 vibratePref.setEnabled(false);
+		mLockNumpadRandom.setEnabled(mLockPatternUtils.isLockNumericPasswordEnabled()); 
             // Disable the quick unlock if its not using PIN/password
             // as a primary lock screen or as a backup to biometric
             } else {
                 quickUnlockScreen.setEnabled(false);
+		mLockNumpadRandom.setEnabled(false); 
             }
 
             final int deviceKeys = res.getInteger(
@@ -815,6 +829,12 @@ public class SecuritySettings extends SettingsPreferenceFragment
             Settings.Global.putInt(getContentResolver(), Settings.Global.SMS_OUTGOING_CHECK_MAX_COUNT,
                      smsSecurityCheck);
             updateSmsSecuritySummary(smsSecurityCheck);
+	} else if (preference == mLockNumpadRandom) {
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.LOCK_NUMPAD_RANDOM,
+                    Integer.valueOf((String) value));
+            mLockNumpadRandom.setValue(String.valueOf(value));
+            mLockNumpadRandom.setSummary(mLockNumpadRandom.getEntry()); 
         }
         return true;
     }

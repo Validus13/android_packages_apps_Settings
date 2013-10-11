@@ -1776,4 +1776,11 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="clear_all_on_right">Recents Clear All Button</string>
     <string name="clear_all_on_right_summary">Set to right side of screen</string>
 
+    <!-- Pin keypad shuffler -->
+    <string name="lock_numpad_random_title">Change the order of PIN pad numbers</string>
+    <string name="lock_numpad_random_dialog_title">PIN pad random order</string>
+    <string name="lock_numpad_random_off">Disabled</string>
+    <string name="lock_numpad_random_always">Always</string>
+    <string name="lock_numpad_random_on_request">On request</string> 
+
 </resources>
