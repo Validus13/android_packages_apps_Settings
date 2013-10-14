@@ -1772,4 +1772,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="media_scanner_on_boot_ask">Ask to scan (notification)</string>
     <string name="media_scanner_on_boot_disabled">Do not scan media</string> 
 
+    <!-- Recents Clear All On Right -->
+    <string name="clear_all_on_right">Recents Clear All Button</string>
+    <string name="clear_all_on_right_summary">Set to right side of screen</string>
+
 </resources>

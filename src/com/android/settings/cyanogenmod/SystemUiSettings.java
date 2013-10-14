@@ -57,7 +57,8 @@ public class SystemUiSettings extends SettingsPreferenceFragment implements Pref
     private static final String KEY_EXPANDED_DESKTOP_NO_NAVBAR = "expanded_desktop_no_navbar";
     private static final String KEY_LOW_BATTERY_WARNING_POLICY = "pref_low_battery_warning_policy";
     private static final String KEY_SCREEN_ON_NOTIFICATION_LED = "screen_on_notification_led";
-    private static final String KEY_RECENTS_RAM_BAR = "recents_ram_bar";  
+    private static final String KEY_RECENTS_RAM_BAR = "recents_ram_bar";
+    private static final String PREF_RECENTS_CLEAR_ALL_ON_RIGHT = "recents_clear_all_on_right";   
     private static final String PREF_USE_ALT_RESOLVER = "use_alt_resolver";
     private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
     private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
@@ -69,6 +70,7 @@ public class SystemUiSettings extends SettingsPreferenceFragment implements Pref
     private ListPreference mLowBatteryWarning;
     private CheckBoxPreference mScreenOnNotificationLed;
     private Preference mRamBar;
+    private CheckBoxPreference mClearAll; 
     private CheckBoxPreference mUseAltResolver;
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;   
@@ -131,6 +133,11 @@ public class SystemUiSettings extends SettingsPreferenceFragment implements Pref
 
 	mRamBar = findPreference(KEY_RECENTS_RAM_BAR);
         updateRamBar();
+
+	mClearAll = (CheckBoxPreference) findPreference(PREF_RECENTS_CLEAR_ALL_ON_RIGHT);
+        mClearAll.setOnPreferenceChangeListener(this);
+        mClearAll.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+            Settings.System.RECENTS_CLEAR_ALL_ON_RIGHT, 0) == 1); 
 
 	mUseAltResolver = (CheckBoxPreference) findPreference(PREF_USE_ALT_RESOLVER);
         mUseAltResolver.setChecked(Settings.System.getInt(
@@ -253,7 +260,12 @@ public class SystemUiSettings extends SettingsPreferenceFragment implements Pref
                     Settings.System.POWER_UI_LOW_BATTERY_WARNING_POLICY,
                     lowBatteryWarning);
             mLowBatteryWarning.setSummary(mLowBatteryWarning.getEntries()[index]);
-            return true; 
+            return true;
+	} else if (preference == mClearAll) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.RECENTS_CLEAR_ALL_ON_RIGHT,
+                (Boolean) objValue ? 1 : 0);
+            return true;  
 	/*
         } else if (preference == mExpandedDesktopNoNavbarPref) {
             boolean value = (Boolean) objValue;
