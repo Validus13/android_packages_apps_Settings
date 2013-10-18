@@ -21,6 +21,11 @@
         android:key="delay_and_timeout"
         android:title="@string/delay_and_timeout_title">
 
+	<CheckBoxPreference
+            android:key="battery_around_lockscreen_ring"
+            android:title="@string/battery_around_lockscreen_ring"
+            android:defaultValue="false" /> 
+
         <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
             android:key="screen_lock_slide_delay_toggle"
             android:title="@string/slide_lock_delay_title" />

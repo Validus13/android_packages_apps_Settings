@@ -1783,4 +1783,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="lock_numpad_random_always">Always</string>
     <string name="lock_numpad_random_on_request">On request</string> 
 
+    <!-- Lockscreen ring battery -->
+    <string name="battery_around_lockscreen_ring">Battery level around lock ring</string> 
+
 </resources>
