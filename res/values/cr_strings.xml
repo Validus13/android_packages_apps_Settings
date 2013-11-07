@@ -3,7 +3,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- crDroid Version -->        
-    <string name="crDroid_version">Ground Zero Version</string>
+    <string name="crDroid_version">Validus13 Version</string>
     <string name="crDroid_version_default">4.0</string>
 
     <!-- Wakeup options --> 

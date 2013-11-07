@@ -17,6 +17,8 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/about_settings">
 
+        <PreferenceScreen android:key="gzlogo"
+                          android:layout="@layout/dirt_logo_row" />		
         <!-- System update settings - launches activity -->
       <!--  <PreferenceScreen android:key="system_update_settings"
                 android:title="@string/system_update_settings_list_item_title" 
