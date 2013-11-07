@@ -22,6 +22,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.preference.CheckBoxPreference;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.preference.PreferenceCategory;
@@ -33,11 +34,26 @@ import com.android.settings.SettingsPreferenceFragment;
 public class NotificationDrawer extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
+    private static final String UI_NOTIFICATION_BEHAVIOUR = "notifications_behaviour";
+
+    private ListPreference mNotificationsBehavior;	
+
+    private Context mContext;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.notification_drawer_settings);
+	PreferenceScreen prefSet = getPreferenceScreen();
+
+        mContext = getActivity();
+
+        int CurrentBehavior = Settings.System.getInt(getContentResolver(), Settings.System.NOTIFICATIONS_BEHAVIOUR, 0);
+            mNotificationsBehavior = (ListPreference) findPreference(UI_NOTIFICATION_BEHAVIOUR);
+            mNotificationsBehavior.setValue(String.valueOf(CurrentBehavior));
+            mNotificationsBehavior.setSummary(mNotificationsBehavior.getEntry());
+            mNotificationsBehavior.setOnPreferenceChangeListener(this);
 
     }
 
@@ -47,6 +63,14 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mNotificationsBehavior) {
+            String val = (String) newValue;
+                     Settings.System.putInt(getContentResolver(), Settings.System.NOTIFICATIONS_BEHAVIOUR,
+            Integer.valueOf(val));
+            int index = mNotificationsBehavior.findIndexOfValue(val);
+            mNotificationsBehavior.setSummary(mNotificationsBehavior.getEntries()[index]);
+            return true;
+	}  
         return false;
     }
 }

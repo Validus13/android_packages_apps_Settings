@@ -14,6 +14,13 @@
             android:key="notification_drawer_style_pref"
             android:title="@string/notification_drawer_background" />
 
+	<!-- Notification drawer behaviour -->
+        <ListPreference
+            android:key="notifications_behaviour"
+            android:title="@string/notification_behaviour_title"
+            android:entries="@array/notifs_beh_entries"
+            android:entryValues="@array/notifs_beh_values" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

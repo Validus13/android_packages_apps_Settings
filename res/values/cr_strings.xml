@@ -4,7 +4,7 @@
 
     <!-- About phone screen, crDroid version -->
     <string name="crdroid_version_title">crDroid version</string>
-    <string name="crdroid_version_default">Unknown</string>
+    <string name="crdroid_version_default">1</string>
 
     <!-- General strings -->
     <string name="reset">Reset</string>
@@ -75,5 +75,8 @@
     <string name="notification_drawer_custom_background_dialog_title">Choose color</string>
     <string name="notif_wallpaper_alpha_title">Notification background transparency</string> 
     <string name="notif_alpha_title">Notification row transparency</string>
+
+    <!-- Notification Behavior -->
+    <string name="notification_behaviour_title">Notification behavior</string>
     
 </resources>
