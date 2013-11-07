@@ -3,8 +3,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- crDroid Version -->        
-    <string name="crDroid_version">crDroid AOSP version</string>
-    <string name="crDroid_version_default">Build 27</string>
+    <string name="crDroid_version">Ground Zero Version</string>
+    <string name="crDroid_version_default">4.0</string>
 
     <!-- Wakeup options --> 
     <string name="pref_wakeon_button_title">Wakeon Button</string>
@@ -116,8 +116,8 @@
     <string name="expanded_desktop_both_hidden">Hide navigation and status bar</string> 
 
     <!-- Quick/Pie Control -->
-    <string name="pie_control_title">SlimPIE</string>
-    <string name="pie_control_dialog_title">SlimPIE</string>
+    <string name="pie_control_title">GZero PIE</string>
+    <string name="pie_control_dialog_title">GZero PIE</string>
     <string name="pie_control_always">Show always</string>
     <string name="pie_control_expanded">Only on expanded desktop mode</string>
     <string name="pie_control_disabled">Disabled</string>
@@ -505,7 +505,7 @@
     <string name="screen_on_notification_led_summary">Enable Notification Light even when screen is on</string>
 
     <!-- TRDS Settings -->
-    <string name="trds_settings_title">Dark Droid</string>
+    <string name="trds_settings_title">Dark Symmetry</string>
 
     <!-- General UI -->
     <string name="misc_short">Misc</string>
