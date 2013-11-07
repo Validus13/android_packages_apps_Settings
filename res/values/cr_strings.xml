@@ -876,5 +876,9 @@
     <string name="wakelock_blocker_reload">Reload</string>
     <string name="wakelock_blocker_warning_title">Proceed with Caution</string>
     <string name="wakelock_blocker_warning">Blocking wakelocks have the potential to cause instability, crashes or data loss.</string>
+    
+    <!-- Xposed Settings -->
+    <string name="xposed_dpi_settings">Xposed Per-App Settings</string>
+    <string name="xposed_frameworks_settings">Xposed Modules Management</string>
 
 </resources>
