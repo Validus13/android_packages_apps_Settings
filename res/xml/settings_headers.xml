@@ -216,6 +216,16 @@
     <header android:id="@+id/system_section"
         android:title="@string/header_category_system" />
 
+    <!-- Partition info -->
+    <header
+        android:icon="@drawable/ic_tab_selected_sdcard"
+        android:title="@string/partition_info_title">
+        <intent
+            android:action="com.android.action.MAIN"
+            android:targetPackage="com.android.settings"
+            android:targetClass="com.android.settings.PartitionInfo" />
+    </header>
+
     <!-- Superuser -->
     <header
         android:id="@+id/superuser"
