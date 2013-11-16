@@ -1721,12 +1721,6 @@
                 android:value="com.android.settings.cmstats.AnonymousStats" />
         </activity>
 
-        <activity android:name=".cyanogenmod.ChangeLog" android:label="@string/changelog_title">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
-
         <activity android:name=".notificationlight.NotificationLightSettings" />
 
         <activity android:name=".notificationlight.BatteryLightSettings" />
