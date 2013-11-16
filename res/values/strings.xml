@@ -4953,7 +4953,7 @@
     <string name="mod_version">CyanogenMod version</string>
     <string name="mod_version_default">Unknown</string>
     <!-- About phone screen, build date of ROM -->
-    <string name="build_date">Build date</string>
+    <string name="build_date">Born On</string>
     <string name="build_date_default">2012-01-01-0000</string>
     <!-- About device screen, Cpu info. -->
     <string name="cpu_info">CPU</string>
@@ -4987,10 +4987,10 @@
 
     <!-- INTERFACE Settings  -->
     <!-- Settings main menu category heading. Interface (Launcher, Themes, System). [CHAR LIMIT=40] -->
-    <string name="header_category_interface">INTERFACE</string>
+    <string name="header_category_interface">Customizations</string>
 
     <!-- Themes settings  -->
-    <string name="themes_settings_title">Themes</string>
+    <string name="themes_settings_title">Deviated Themes</string>
 
     <!-- Performance settings  -->
     <string name="performance_settings_title">Performance</string>
@@ -5050,19 +5050,7 @@
     <string name="pref_use_16bpp_alpha_title">16bit transparency</string>
     <string name="pref_use_16bpp_alpha_summary">Better graphics performance, but lower quality and may cause visual artifacts (requires reboot)</string>
 
-    <!-- Change Log strings -->
-    <string name="changelog_title">View changelog</string>
-    <string name="changelog_dialog">Changelog</string>
-    <string name="changelog_loading">Loading changelog...</string>
-    <string name="changelog_error">Unable to load changelog</string>
-    <string name="changelog_unknown">Unknown</string>
-    <string name="changelog_version">Version</string>
-
-    <!-- CM Updater -->
-    <string name="cmupdate_settings_title">CyanogenMod updates</string>
-    <string name="cmupdate_settings_summary">Check for, view or install available updates</string>
-
     <!-- Launches Dev Tools -->
-    <string name="development_tools_title">Launch Tools</string>
+    <string name="development_tools_title">Dev Tools</string>
 
 </resources>
