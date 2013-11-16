@@ -112,13 +112,13 @@ public class NotificationsShortcutFragment extends SettingsPreferenceFragment {
                 int index = mNotificationShortcutsColorMode.findIndexOfValue(val);
                 mNotificationShortcutsColorMode.setSummary(
                     mNotificationShortcutsColorMode.getEntries()[index]);
-    updateColorPreference();
-					return true;
+                updateColorPreference();
+		return true;
             }
         });
-+  updateColorPreference();
+        updateColorPreference();
     }
-
+  
     @Override
     public View onCreateView(LayoutInflater inflater,
             ViewGroup container, Bundle savedInstanceState) {
