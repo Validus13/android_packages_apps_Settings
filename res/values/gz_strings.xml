@@ -3,8 +3,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- About phone screen, crDroid version -->
-    <string name="crdroid_version_title">crDroid version</string>
-    <string name="crdroid_version_default">Build 4</string>
+    <string name="crdroid_version_title">Ground Zero Version</string>
+    <string name="crdroid_version_default">Beta 1.5</string>
 
     <!-- General strings -->
     <string name="reset">Reset</string>
@@ -14,7 +14,7 @@
     <string name="additional_options_title">Additional options</string>
 
     <!-- crDroid settings screens -->
-    <string name="crdroid_settings_title">crDroid customs</string>
+    <string name="crdroid_settings_title">Ground Zero Personal Touches</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
