@@ -356,6 +356,9 @@
     <string name="volbtn_music_controls_title">Playback control</string>
     <string name="volbtn_music_controls_summary">When the screen is off, long pressing the volume keys will seek music tracks</string>
 
+    <!-- Lockscreen battery ring -->
+    <string name="battery_around_lockscreen_ring">Battery around unlock ring</string>   
+    
     <!-- Buttons settings header -->
     <string name="button_settings">Buttons</string>
 
