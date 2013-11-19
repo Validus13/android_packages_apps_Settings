@@ -142,6 +142,10 @@
     <string name="status_bar_toggle_info">Automatic brightness is enabled</string>
 
     <!-- Button shorcut actions -->
+    <string name="shortcut_action_airplane">Airplane mode</string>
+    <string name="shortcut_action_power_off">Power off</string>
+    <string name="shortcut_action_reboot">Reboot</string>
+    <string name="shortcut_action_sound">Sound</string>
     <string name="shortcut_action_app">Custom app</string>
     <string name="shortcut_action_home">Home</string>
     <string name="shortcut_action_back">Back</string>
@@ -245,8 +249,8 @@
     <string name="icon_picker_choose_icon_title">Choose icon</string>
     <string name="group_applications">Applications</string>
     <string name="select_custom_app_title">Select custom application</string>
-    <string name="shortcuts_color_title">Shortcut icon color</string>
-    <string name="shortcuts_color_summary">Colorize the shortcut icons</string>
+    <string name="shortcuts_text_color_title">Text color</string>
+    <string name="shortcuts_color_title">Icon color</string>    
     <string name="shortcuts_color_mode_title">Icon color mode</string>
     <string name="shortcuts_color_mode_summary">Change the shorcuts icon color mode</string>
 
@@ -297,6 +301,7 @@
     <!-- Navigation settings -->
     <string name="navigation_settings_options_title">Navigation options</string>
     <string name="navigation_settings_title">Navigation</string>
+    <string name="power_menu_title">Global menu</string>
 
     <!-- Navigation bar -->
     <string name="navigation_bar_size_42_dp_default">42 dp (default)</string>
