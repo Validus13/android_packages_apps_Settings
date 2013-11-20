@@ -12,6 +12,8 @@
     <string name="disabled">Disabled</string>
     <string name="default_string">Default</string>
     <string name="additional_options_title">Additional options</string>
+    <string name="reset_message">Reset all entries to default?</string>
+    <string name="style_title">Style</string>
 
     <!-- crDroid settings screens -->
     <string name="crdroid_settings_title">Ground Control</string>
@@ -303,6 +305,9 @@
     <string name="navigation_settings_title">Navigation</string>
     <string name="power_menu_title">Global menu</string>
 
+    <!-- Power menu -->
+    <string name="power_menu_style_summary">Change global menu colors</string>
+
     <!-- Navigation bar -->
     <string name="navigation_bar_size_42_dp_default">42 dp (default)</string>
     <string name="navigation_bar_size_36_dp">36 dp</string>
@@ -343,15 +348,37 @@
     <string name="navbar_button_style_reset_message">Reset all style entries to default?</string>
 
     <!-- Navigation bar button style -->
-    <string name="nav_bar_button_style">Button style</string>
-    <string name="nav_bar_button_style_summary">Change navigation bar button style</string>
+    <string name="nav_bar_button_style_summary">Change navigation bar button colors</string>
     <string name="button_transparency_title">Button transparency</string>
-    <string name="navigation_bar_icon_tint_title">Button color</string>
-    <string name="nav_button_color_mode_title">Color mode</string>
-    <string name="nav_button_color_mode_dialog_title">Colorize</string>
     <string name="nav_button_color_mode_summary">Change the navigation bar button color mode</string>
+<<<<<<< HEAD:res/values/gz_strings.xml
     <string name="navigation_bar_glow_tint_title">Button glow color</string>
 	
+=======
+    <string name="navigation_bar_glow_tint_title">Glow color</string>
+
+    <!-- Recents Ram Bar -->
+    <string name="ram_bar">Recents RAM bar</string>
+    <string name="ram_bar_note_title">Note</string>
+    <string name="ram_bar_note_summary">This RAM bar shows the actual android memory (RAM) utilization. Please note that having cached apps helps your device open apps much faster. For further explanations on how android memory (RAM) management works, check the help menu.</string>
+    <string name="ram_bar_mode_title">Recents RAM bar mode</string>
+    <string name="ram_bar_mode_dialog_title">Show on recents RAM bar</string>
+    <string name="ram_bar_none">None</string>
+    <string name="ram_bar_apps">Applications</string>
+    <string name="ram_bar_cache">Applications and cache</string>
+    <string name="ram_bar_other">Applications, cache and other</string>
+    <string name="ram_bar_style_cat">Recents RAM bar style</string>
+    <string name="ram_bar_color_app_mem_color">Applications RAM color</string>
+    <string name="ram_bar_color_cache_mem_color">Cache RAM color</string>
+    <string name="ram_bar_color_total_mem_color">Other RAM color</string>
+    <string name="ram_bar_color_enabled">Enabled</string>
+    <string name="ram_bar_color_disabled">Disabled</string>
+    <string name="ram_bar_button_help">Help</string>
+    <string name="ram_bar_button_reset">Reset colors</string>
+    <string name="ram_bar_reset">Reset</string>
+    <string name="ram_bar_reset_message">Reset RAM bar style to default?</string>	 
+
+>>>>>>> ac3581f... Settings: new dslv + Dialog handling:res/values/cr_strings.xml
     <!-- Volume buttons custom controls -->
     <string name="hardware_keys_volume_keys_title">Volume buttons</string>
     <string name="home_wake_title">Home button wake</string>
